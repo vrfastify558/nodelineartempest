@@ -1,3 +1,3 @@
-module trace_agent_a8ee1a
+module trace_agent_503339
 
 go 1.19
